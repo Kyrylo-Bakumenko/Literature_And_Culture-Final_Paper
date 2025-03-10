@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LDA Visualization</title>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+    }
+    
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .topics {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .topic {
+      background-color: white;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .topic h3 {
+      margin-top: 0;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+    
+    .word-list {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    
+    .word-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .word-item:last-child {
+      border-bottom: none;
+    }
+    
+    .note {
+      font-style: italic;
+      color: #666;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Topic Model Visualization</h1>
+      <p>Visualization of LDA topic model for Korean Literature texts</p>
+    </div>
+    
+    <div class="topics">
+      <div class="topic">
+        <h3>Topic 1: Modernization & Transformation</h3>
+        <ul class="word-list">
+          <li class="word-item"><span>modern</span> <span>0.041</span></li>
+          <li class="word-item"><span>city</span> <span>0.038</span></li>
+          <li class="word-item"><span>change</span> <span>0.033</span></li>
+          <li class="word-item"><span>tradition</span> <span>0.029</span></li>
+          <li class="word-item"><span>new</span> <span>0.025</span></li>
+          <li class="word-item"><span>western</span> <span>0.022</span></li>
+          <li class="word-item"><span>society</span> <span>0.018</span></li>
+          <li class="word-item"><span>industrial</span> <span>0.016</span></li>
+        </ul>
+      </div>
+      
+      <div class="topic">
+        <h3>Topic 2: Family & Relationships</h3>
+        <ul class="word-list">
+          <li class="word-item"><span>mother</span> <span>0.052</span></li>
+          <li class="word-item"><span>father</span> <span>0.042</span></li>
+          <li class="word-item"><span>home</span> <span>0.036</span></li>
+          <li class="word-item"><span>family</span> <span>0.031</span></li>
+          <li class="word-item"><span>child</span> <span>0.028</span></li>
+          <li class="word-item"><span>love</span> <span>0.025</span></li>
+          <li class="word-item"><span>woman</span> <span>0.021</span></li>
+          <li class="word-item"><span>marriage</span> <span>0.019</span></li>
+        </ul>
+      </div>
+      
+      <div class="topic">
+        <h3>Topic 3: Rural & Natural World</h3>
+        <ul class="word-list">
+          <li class="word-item"><span>village</span> <span>0.045</span></li>
+          <li class="word-item"><span>mountain</span> <span>0.038</span></li>
+          <li class="word-item"><span>river</span> <span>0.034</span></li>
+          <li class="word-item"><span>land</span> <span>0.029</span></li>
+          <li class="word-item"><span>farmer</span> <span>0.026</span></li>
+          <li class="word-item"><span>season</span> <span>0.023</span></li>
+          <li class="word-item"><span>nature</span> <span>0.019</span></li>
+          <li class="word-item"><span>harvest</span> <span>0.016</span></li>
+        </ul>
+      </div>
+      
+      <div class="topic">
+        <h3>Topic 4: Historical & Political</h3>
+        <ul class="word-list">
+          <li class="word-item"><span>war</span> <span>0.049</span></li>
+          <li class="word-item"><span>nation</span> <span>0.043</span></li>
+          <li class="word-item"><span>japanese</span> <span>0.037</span></li>
+          <li class="word-item"><span>colonial</span> <span>0.031</span></li>
+          <li class="word-item"><span>liberation</span> <span>0.027</span></li>
+          <li class="word-item"><span>government</span> <span>0.024</span></li>
+          <li class="word-item"><span>freedom</span> <span>0.021</span></li>
+          <li class="word-item"><span>resistance</span> <span>0.018</span></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="note">
+      <p>Note: This is a placeholder visualization. In a real implementation, this would be generated dynamically using pyLDAvis based on your corpus analysis.</p>
+    </div>
+  </div>
+</body>
+</html>

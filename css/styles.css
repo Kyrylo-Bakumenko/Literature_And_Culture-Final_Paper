@@ -1,74 +1,191 @@
+/* Base styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Source Sans Pro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
+    color: #333;
 }
 
-.python-cell {
+/* Add this rule for extra bold title */
+header h1 {
+    font-family: 'Merriweather', Georgia, serif;
+    font-weight: 900; /* Extra bold */
+    color: #0d2e4d;
+    letter-spacing: -0.02em;
+}
+
+/* Navigation styles */
+.visualizations-nav {
     background-color: #f8f9fa;
-    border-radius: 5px;
     padding: 15px;
-    margin-bottom: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    border-left: 4px solid #0d6efd;
 }
 
-.python-cell .code-area {
-    margin-bottom: 10px;
+.floating-nav {
+    opacity: 0.9;
+    transition: opacity 0.3s;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
 }
 
-.python-cell pre {
-    margin-bottom: 0;
-    border-left: 4px solid #5671d4;
-    padding-left: 15px;
+.floating-nav:hover {
+    opacity: 1;
 }
 
-.python-cell .buttons {
+.btn-floating {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    margin: 5px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn-floating:hover {
+    transform: scale(1.1);
+}
+
+/* Section highlighting when scrolled to */
+.section-highlight {
+    animation: highlight 2s ease-in-out;
+}
+
+@keyframes highlight {
+    0% { background-color: rgba(13, 110, 253, 0.1); }
+    100% { background-color: transparent; }
+}
+
+/* Visualization toggle styles - simplified */
+.visualization-toggle {
+    margin-bottom: 15px;
+}
+
+.visualization-toggle .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.visualization-toggle .btn {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    transition: all 0.3s;
+}
+
+#visualization-container {
+    text-align: center;
+    transition: opacity 0.3s;
+}
+
+#visualization-container img {
+    max-width: 100%;
+    max-height: 600px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.visualization-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.visualization-container img {
+    max-width: 100%;
+    max-height: 600px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Code block styling */
+.code-block {
+    margin: 20px 0;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #f6f8fa;
+}
+
+.code-header {
+    padding: 8px 16px;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #e1e4e8;
     display: flex;
     justify-content: flex-end;
-    gap: 10px;
-    margin-bottom: 10px;
 }
 
-.output-area {
-    background-color: #f1f1f1;
-    border-radius: 5px;
-    padding: 10px;
-    border-left: 4px solid #28a745;
-    white-space: pre-wrap;
+.code-content {
+    padding: 0;
+    margin: 0;
+    transition: max-height 0.3s ease-out;
 }
 
-.error-output {
-    background-color: #ffeaea;
-    border-left-color: #dc3545;
+.code-content pre {
+    margin: 0;
+    padding: 16px;
+    overflow-x: auto;
 }
 
+/* Hide class for toggleable content */
 .hidden {
     display: none;
 }
 
-.plotting-output {
-    text-align: center;
-    background-color: white;
+/* Iframe for LDA visualization */
+.ratio {
+    position: relative;
+    width: 100%;
 }
 
-/* Markdown content styles */
-#content-container {
-    max-width: 800px;
-    margin: 0 auto;
+.ratio::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
 }
 
-#content-container h1, 
-#content-container h2, 
-#content-container h3 {
-    margin-top: 1.5em;
-    margin-bottom: 0.75em;
+.ratio iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
-#content-container blockquote {
-    border-left: 4px solid #ced4da;
-    padding-left: 1em;
-    color: #6c757d;
+/* Paper-specific typography */
+.paper-content {
+    font-family: 'Merriweather', Georgia, serif;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: #212529;
 }
 
-#content-container img {
-    max-width: 100%;
-    height: auto;
+.paper-content h3 {
+    font-family: 'Merriweather', Georgia, serif;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #0d2e4d;
+}
+
+.paper-content p {
+    margin-bottom: 1.2rem;
+    text-align: justify;
+    hyphens: auto;
+}
+
+header h3 {
+    font-family: 'Merriweather', Georgia, serif;
+    font-weight: 400;
+    color: #465a69;
+}
+
+/* Citation styling */
+.paper-content ul {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }

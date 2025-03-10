@@ -1,41 +1,92 @@
 function renderMarkdown(markdownContent) {
     const contentContainer = document.getElementById('content-container');
     
+    if (!contentContainer) {
+        console.error('Content container not found!');
+        return;
+    }
+    
+    // Clear any loading indicators or previous content
+    contentContainer.innerHTML = '';
+    
+    // Check if highlight.js is available
+    const highlightCodeBlock = function(code, lang) {
+        if (typeof hljs === 'undefined') {
+            console.warn("highlight.js is not available. Code will not be highlighted.");
+            return code;
+        }
+        
+        if (lang && hljs.getLanguage(lang)) {
+            try {
+                return hljs.highlight(code, { language: lang }).value;
+            } catch (err) {
+                console.warn("Error highlighting code:", err);
+            }
+        }
+        return code;
+    };
+    
     // Configure marked renderer
     marked.setOptions({
-        highlight: function(code, lang) {
-            if (lang && hljs.getLanguage(lang)) {
-                try {
-                    return hljs.highlight(code, { language: lang }).value;
-                } catch (err) {}
-            }
-            return code;
-        },
+        highlight: highlightCodeBlock,
         breaks: true,
+        gfm: true
     });
     
-    // Custom renderer to handle Python code blocks specially
+    // Renderer to customize output
     const renderer = new marked.Renderer();
-    const originalCodeRenderer = renderer.code.bind(renderer);
     
+    // Handle Python code blocks specially
     renderer.code = function(code, language) {
+        // For Python code, create toggle button UI
         if (language === 'python') {
-            // Create a special container for Python code that will be made interactive
-            return `<div class="python-cell" data-code="${encodeURIComponent(code)}">
-                <div class="buttons">
-                    <button class="btn btn-sm btn-primary run-button">Run</button>
-                    <button class="btn btn-sm btn-outline-secondary clear-button">Clear</button>
+            return `<div class="code-block">
+                <div class="code-header">
+                    <button class="btn btn-sm btn-outline-secondary" onclick="toggleCodeVisibility(this)">Show Code</button>
                 </div>
-                <div class="code-area">
-                    <pre><code class="language-python">${hljs.highlight(code, { language: 'python' }).value}</code></pre>
+                <div class="code-content hidden">
+                    <pre><code class="language-python">${code}</code></pre>
                 </div>
-                <div class="output-area hidden"></div>
             </div>`;
         }
-        return originalCodeRenderer(code, language);
+        
+        // For other languages, use default rendering
+        return `<pre><code class="${language ? 'language-' + language : ''}">${code}</code></pre>`;
     };
     
     // Render the markdown
-    marked.use({ renderer });
-    contentContainer.innerHTML = marked.parse(markdownContent);
+    try {
+        // Use the configured renderer
+        marked.use({ renderer });
+        
+        // Render and set the HTML
+        const renderedContent = marked.parse(markdownContent);
+        
+        // Check if this is the paper content and add a class if it is
+        const urlParams = new URLSearchParams(window.location.search);
+        const mdParam = urlParams.get('md');
+        
+        if (mdParam === 'korean-identity-final') {
+            contentContainer.innerHTML = `<div class="paper-content">${renderedContent}</div>`;
+        } else {
+            contentContainer.innerHTML = renderedContent;
+        }
+        
+        // Re-highlight all code blocks
+        if (typeof hljs !== 'undefined') {
+            document.querySelectorAll('pre code').forEach(block => {
+                hljs.highlightBlock(block);
+            });
+        }
+        
+        console.log('Markdown rendering complete');
+    } catch (error) {
+        console.error("Error rendering markdown:", error);
+        contentContainer.innerHTML = `
+            <div class="alert alert-danger">
+                <h4>Error Rendering Content</h4>
+                <p>${error.message}</p>
+            </div>
+        `;
+    }
 }
