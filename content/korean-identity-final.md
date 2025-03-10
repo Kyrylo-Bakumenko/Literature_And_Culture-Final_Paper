@@ -1,10 +1,10 @@
-# Introduction
+### Introduction
 
 The division of Korea in 1945 led to the emergence of two competing states, each defining itself explicitly in opposition to the other. Both Kim Il-sung’s North Korea and Syngman Rhee’s South Korea strategically employed literature, cinema, and broader cultural media as instruments for ideological reinforcement and the formation of distinct national identities. This paper investigates how these regimes utilized cultural production, specifically examining media policy, historical narrative and mythmaking, personality cults versus institutional imagery, and thematic content in literature and cinema.
 
 Following Benedict Anderson’s concept of “imagined communities,” this research argues that media served not only as a tool for nation-building but also as a battlefield where competing ideologies vied to construct collective memory and legitimacy (Anderson 6). North Korea's embrace of Juche ideology and socialist realism stood in sharp contrast to South Korea's pro-Western capitalist democracy, creating diametrically opposed narratives about what constituted authentic Korean identity. Furthermore, both regimes meticulously employed historical symbolism and ritual to anchor their respective ideological narratives deeply into collective national consciousness. Recent scholarship highlights how South Korea strategically employed anti-Japanism as an ideological necessity for constructing a homogenous national identity distinct from colonial influences, further differentiating itself from North Korea (Kang 2024, 1-2)
 
-# Ideological Foundations and Media Policy
+### Ideological Foundations and Media Policy
 
 The media policies of North and South Korea reflect their broader ideological frameworks. Deeply shaped by U.S. geopolitical interests, Rhee’s South Korea employed anti-communism as a foundational state-building strategy, particularly through the 1948 National Security Act. This Act enforced stringent censorship to eliminate communist or leftist expressions, framing communism as existentially opposed to national security and identity (Kim 2008, 123; Seo 2007). Seo (2007) emphasizes that Rhee’s regime did not promote organic nationalism but wielded it as an authoritarian tool, relying on American military and economic backing. Further enriching its ideological foundations, South Korea integrated anti-Japanism into its identity-building project immediately after liberation, linking this stance closely to pro-American and anti-communist sentiments, thus solidifying alignment with Western interests (Kang 2024, 2). Additionally, South Korea's long-term strategic promotion of its popular culture, later exemplified through the Hallyu phenomenon, underscores an institutionalized approach to national branding that originated during Rhee’s era as an investment in the nation’s future global image (Kim & Vasileva 2017, 9866).
 
@@ -21,7 +21,7 @@ This ideological shift further cemented media’s role in shaping Kim Il-sung’
 
 Building upon these ideological foundations, both regimes crafted historical narratives that reinforced their respective national identities. South Korea sought to define itself as the legitimate Korean state upholding democracy and economic modernization, while North Korea built a totalitarian identity centered on socialist nationalism and leader worship. Both nations exercised extreme media control, but with different goals: Rhee’s South Korea suppressed communism while maintaining an anti-communist democratic image, whereas Kim’s North Korea constructed an identity that merged national survival with ideological purity, ensuring that North Koreans saw themselves not just as citizens, but as revolutionary subjects under Kim Il-sung’s leadership.
 
-# Historical Narrative and Mythmaking
+### Historical Narrative and Mythmaking
 
 Historical narratives were central to legitimizing both regimes. In South Korea, Syngman Rhee's regime meticulously constructed historical narratives that underscored its legitimacy by aligning national identity with anti-communist and democratic ideals. State rituals and commemorations strategically reinforced legitimacy and shaped a national identity distinct from North Korea. The March 1st Movement was presented as the foundation of Korea’s ‘racial independence,’ a historical ‘compass, signal, and milestone’ for the nation’s future (Kim 2005, 95). Likewise, ‘Gwangbokjeol,’ marking Korea’s liberation and the Republic of Korea’s founding, was framed as a national rebirth, reinforcing South Korea’s narrative of democratic and capitalist progression (Kim 2005, 95-96).
 
@@ -32,7 +32,7 @@ By depicting Japan as morally corrupt and inferior, South Korean literature rein
 Kim Il-sung’s regime rewrote history, portraying him as Korea’s sole liberator while downplaying Soviet contributions and elevating his guerrilla past as the foundation of state legitimacy (Schönherr 2012; Hart 2000, 154). North Korean educational materials consistently portrayed Kim as a revolutionary hero whose personal achievements and struggles formed the bedrock of the nation's historical narrative, extending into broader cultural productions and state rituals (Won and Huntington 2021, 276). North Korean textbooks framed Kim Il-sung as a self-sacrificing revolutionary, promoting solidarity for reunification under his leadership (Won and Huntington 2021, 276). Complementing this, visual portrayals such as kindergarten textbook maps depicted a unified Korea with Pyongyang as its capital, symbolically erasing South Korea's legitimacy (Won and Huntington 2021, 281).
 These constructed historical narratives integrated seamlessly with each regime's approach to leadership representation.
 
-# Cult of Personality vs. Institutional Imagery
+### Cult of Personality vs. Institutional Imagery
 A key distinction between North and South Korea’s national identities lies in their portrayal of leadership. Despite its authoritarianism, South Korea’s leadership imagery prioritized institutional legitimacy, linking national identity to democracy and economic modernization rather than to Rhee’s personal glorification (Kim 2006, 156). Rhee's regime presented modern South Korean society as both ideal and justified, inherently connecting economic and democratic advancements to national identity (Hart 2000, 148).
 
 In contrast, North Korea built an extensive personality cult around Kim Il-sung, portraying him as a near-messianic figure essential to the nation's survival (Grzelczyk 2014, 182). This narrative framed Kim and his family as indispensable leaders, elevating their historical roles to solidify legitimacy (Hart 2000, 154-155).
@@ -74,7 +74,7 @@ Its symbolism is unsubtle yet effective. Americans are “jackals,” dehumanize
 
 Thus, Jackals is not merely a work of literature—it is textbook propaganda, crafted to instill hatred toward Americans, reinforce North Korea’s self-perception as a besieged revolutionary state, and justify militant nationalism.
 
-# Comparative Analysis: Binary Opposition and External Influence
+### Comparative Analysis: Binary Opposition and External Influence
 
 Both Koreas defined themselves through opposition. South Korea framed North Korea as an oppressive communist dictatorship, reinforcing its own identity as a democratic, Western-aligned state (Seo 2007; Kim 2006, 156). Conversely, North Korea portrayed South Korea as an American puppet, emphasizing the South’s subservience to Western imperialism (Seo 2007; Grzelczyk 2014, 187).
 
@@ -91,7 +91,7 @@ Beyond ideology, these binary narratives extended into cultural forms. South Kor
 
 Ultimately, media served as a cultural battlefield where each Korea sought to legitimize itself while negating the other. South Korea positioned itself as a beacon of freedom and progress, while North Korea claimed to be the last bastion of Korean purity and self-reliance. These narratives were deeply embedded in the films, books, and propaganda that shaped public consciousness on both sides of the 38th parallel.
 
-# Media as a Cultural Battlefield
+### Media as a Cultural Battlefield
 
 Through strategic control and manipulation of media, both Koreas effectively transformed cultural production into a battleground for national identity formation. South Korea framed itself as a beacon of anti-communist democratic capitalism, leveraging modernization, institutional legitimacy, and selective cultural openness to reinforce its ideological position. North Korea, by contrast, constructed an identity rooted in Juche, revolutionary struggle, and a rigid personality cult, ensuring absolute ideological control through Socialist Realist aesthetics and historical revisionism. The media policies of both regimes were not just reactive but proactive–each to legitimize themselves and negate the other, embedding this binary opposition into literature, cinema, and public memory.
 
@@ -99,7 +99,7 @@ These ideological strategies did not exist in isolation. South Korea’s media l
 
 Stepping beyond the historical context, the strategies employed by North and South Korea in the mid-20th century offer a striking lens through which to examine our own informational age. Today, we have access to an unprecedented volume of media, yet the slice of information we engage with is curated–filtered by algorithms, ideological preferences, and digital echo chambers. The tools of ideological reinforcement may have changed, but the fundamental structures remain: the information we consume shapes not only how we understand history but how we define ourselves in the present. In this vast informational landscape, the responsibility falls upon us to question sources, recognize biases, and understand how the narratives we are presented with may subtly reconstruct how we see the world and identify ourselves . If the Korean experience demonstrates anything, it is that media is never neutral; it is a force that not only reflects reality but actively constructs it.
 
-# Citations
+## Citations
 
 - Anderson, Benedict R. O'G. (1991). *Imagined communities: reflections on the origin and spread of nationalism* (Revised and extended ed.). London: Verso. ISBN 978-0-86091-546-1.
 - Kang, Jeonggu. "Anti-Japanism as a Strategy for Reshaping National Identity in Post-Liberation South Korean Fictions (1945–1948)." *International Journal of Asian Studies*, 2024.
