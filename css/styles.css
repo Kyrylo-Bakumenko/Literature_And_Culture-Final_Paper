@@ -1,0 +1,74 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+.python-cell {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.python-cell .code-area {
+    margin-bottom: 10px;
+}
+
+.python-cell pre {
+    margin-bottom: 0;
+    border-left: 4px solid #5671d4;
+    padding-left: 15px;
+}
+
+.python-cell .buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.output-area {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    border-left: 4px solid #28a745;
+    white-space: pre-wrap;
+}
+
+.error-output {
+    background-color: #ffeaea;
+    border-left-color: #dc3545;
+}
+
+.hidden {
+    display: none;
+}
+
+.plotting-output {
+    text-align: center;
+    background-color: white;
+}
+
+/* Markdown content styles */
+#content-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#content-container h1, 
+#content-container h2, 
+#content-container h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.75em;
+}
+
+#content-container blockquote {
+    border-left: 4px solid #ced4da;
+    padding-left: 1em;
+    color: #6c757d;
+}
+
+#content-container img {
+    max-width: 100%;
+    height: auto;
+}

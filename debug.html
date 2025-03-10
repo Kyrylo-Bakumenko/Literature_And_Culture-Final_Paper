@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Blog Debug Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
+        .success { color: green; }
+        .error { color: red; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Python Blog Debug Page</h1>
+    
+    <div id="file-check">
+        <h2>File Structure Check</h2>
+        <div id="file-results"></div>
+    </div>
+
+    <div id="content-check">
+        <h2>Content Check</h2>
+        <pre id="content-preview"></pre>
+    </div>
+
+    <script>
+        // Check essential files
+        const essentialFiles = [
+            'index.html',
+            'css/styles.css',
+            'js/main.js',
+            'js/markdown.js',
+            'js/python-runner.js',
+            'content/sample-post.md'
+        ];
+        
+        const fileResults = document.getElementById('file-results');
+        const contentPreview = document.getElementById('content-preview');
+        
+        // Check each file
+        Promise.all(essentialFiles.map(file => 
+            fetch(file)
+                .then(response => {
+                    if (!response.ok) throw new Error(`HTTP error ${response.status}`);
+                    return { file, status: 'success', response };
+                })
+                .catch(error => ({ file, status: 'error', error: error.message }))
+        )).then(results => {
+            results.forEach(result => {
+                const elem = document.createElement('div');
+                elem.className = result.status;
+                elem.textContent = `${result.file}: ${result.status === 'success' ? '✓ Found' : '❌ Not found - ' + result.error}`;
+                fileResults.appendChild(elem);
+                
+                // If it's the markdown file and it was found, show a preview
+                if (result.file === 'content/sample-post.md' && result.status === 'success') {
+                    result.response.text().then(text => {
+                        contentPreview.textContent = text.substring(0, 200) + '...';
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

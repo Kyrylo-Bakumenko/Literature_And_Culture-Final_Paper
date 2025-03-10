@@ -1,0 +1,7 @@
+# Simplified configuration for Render.com
+services:
+  - type: web
+    name: python-interactive-blog
+    env: static
+    buildCommand: ""
+    staticPublishPath: .
