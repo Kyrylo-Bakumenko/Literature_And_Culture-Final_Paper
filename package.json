@@ -1,0 +1,13 @@
+{
+  "name": "python-interactive-blog",
+  "version": "1.0.0",
+  "description": "Interactive blog with Python code execution capability",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "node live-server.js"
+  },
+  "dependencies": {
+    "browser-sync": "^2.29.3"
+  }
+}
