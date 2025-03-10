@@ -11,6 +11,42 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.5.1/styles/github.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <style>
+        /* Custom button styles with pastel colors */
+        .btn-primary {
+            background-color: #7ea8d6 !important;
+            border-color: #7ea8d6 !important;
+        }
+        
+        .btn-primary:hover {
+            background-color: #5d8cbf !important;
+            border-color: #5d8cbf !important;
+        }
+        
+        .btn-outline-primary {
+            color: #7ea8d6 !important;
+            border-color: #7ea8d6 !important;
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: #7ea8d6 !important;
+            color: white !important;
+        }
+        
+        .btn-outline-primary.active {
+            background-color: #7ea8d6 !important;
+            color: white !important;
+        }
+        
+        .btn-info {
+            background-color: #83bed6 !important;
+            border-color: #83bed6 !important;
+        }
+        
+        .btn-info:hover {
+            background-color: #6dabc3 !important;
+            border-color: #6dabc3 !important;
+        }
+        
         .floating-nav {
             position: fixed;
             bottom: 20px;
@@ -27,6 +63,13 @@
             justify-content: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.3);
             margin: 5px;
+        }
+
+        /* Additional container style to make the paper container more appropriate for reading */
+        @media (min-width: 1200px) {
+            .container.reading-optimized {
+                max-width: 1000px;  /* Keep container a bit wider than content */
+            }
         }
     </style>
     
@@ -51,7 +94,7 @@
     </script>
 </head>
 <body>
-    <div class="container my-5">
+    <div class="container my-5 reading-optimized">
         <header class="mb-5">
             <h1 class="text-center fw-bold">Nation Building and National Identity in Korea</h1>
             <h3 class="text-center">Cinema and Literature as Tools of Statecraft</h3>
@@ -83,10 +126,11 @@
     <!-- External Libraries - Load marked AFTER highlight.js -->
     <script src="https://cdn.jsdelivr.net/npm/marked@4.0.18/marked.min.js"></script>
 
-    <!-- App Scripts (removed python-runner.js since we're not executing code) -->
+    <!-- App Scripts -->
     <script src="js/markdown.js"></script>
     <script src="js/navigation.js"></script>
     <script src="js/viz-toggle.js"></script>
+    <script src="js/iframe-resizer.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

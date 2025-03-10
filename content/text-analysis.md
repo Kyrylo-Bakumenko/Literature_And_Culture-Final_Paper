@@ -26,10 +26,12 @@ The following visualization shows the distribution of our sources over time, wit
 
 ## Topic Modeling with LDA
 
-The visualization below shows the results of Latent Dirichlet Allocation (LDA) topic modeling on our Korean literature corpus:
-
-<div class="ratio ratio-16x9 mb-4">
-  <iframe src="assets/lda_topics.html" title="PyLDAvis Visualization"></iframe>
+<div class="lda-section">
+  <p class="text-center mb-3">The visualization below shows the results of Latent Dirichlet Allocation (LDA) topic modeling on our Korean literature corpus:</p>
+  
+  <div class="ratio ratio-16x9">
+    <iframe src="assets/lda_topics.html" title="PyLDAvis Visualization" allowfullscreen></iframe>
+  </div>
 </div>
 
 ### About LDA Topic Modeling

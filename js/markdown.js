@@ -54,6 +54,18 @@ function renderMarkdown(markdownContent) {
         return `<pre><code class="${language ? 'language-' + language : ''}">${code}</code></pre>`;
     };
     
+    // Add custom class to iframes
+    renderer.html = function(html) {
+        // Handle the LDA visualization iframe specially
+        if (html.includes('lda-visualization.html') || html.includes('lda_topics.html')) {
+            // Make sure we don't add the class if it's already in a full-width container
+            if (!html.includes('full-width-section')) {
+                return `<div class="full-width-iframe-container">${html}</div>`;
+            }
+        }
+        return html;
+    };
+    
     // Render the markdown
     try {
         // Use the configured renderer
