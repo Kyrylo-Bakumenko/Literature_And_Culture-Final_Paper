@@ -1,25 +1,32 @@
 /* Base styles */
+:root {
+    --pastel-blue: #7ea8d6;       /* Main pastel blue */
+    --pastel-blue-dark: #5d8cbf;  /* Darker pastel blue for hover effects */
+    --pastel-blue-light: #d0e0f3; /* Lighter pastel blue for backgrounds */
+    --text-blue: #3d5a7a;         /* Softer blue for text */
+}
+
 body {
     font-family: 'Source Sans Pro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
 }
 
-/* Add this rule for extra bold title */
+/* Add this rule for extra bold title with softer blue */
 header h1 {
     font-family: 'Merriweather', Georgia, serif;
     font-weight: 900; /* Extra bold */
-    color: #0d2e4d;
+    color: var(--text-blue);
     letter-spacing: -0.02em;
 }
 
-/* Navigation styles */
+/* Navigation styles with pastel blue */
 .visualizations-nav {
     background-color: #f8f9fa;
     padding: 15px;
     border-radius: 5px;
     margin-bottom: 30px;
-    border-left: 4px solid #0d6efd;
+    border-left: 4px solid var(--pastel-blue);
 }
 
 .floating-nav {
@@ -51,17 +58,17 @@ header h1 {
     transform: scale(1.1);
 }
 
-/* Section highlighting when scrolled to */
+/* Section highlighting with softer blue */
 .section-highlight {
     animation: highlight 2s ease-in-out;
 }
 
 @keyframes highlight {
-    0% { background-color: rgba(13, 110, 253, 0.1); }
+    0% { background-color: rgba(126, 168, 214, 0.15); } /* Pastel blue with low opacity */
     100% { background-color: transparent; }
 }
 
-/* Visualization toggle styles - simplified */
+/* Visualization toggle button styles - softened */
 .visualization-toggle {
     margin-bottom: 15px;
 }
@@ -71,10 +78,17 @@ header h1 {
     flex-wrap: wrap;
 }
 
-.visualization-toggle .btn {
-    margin-right: 5px;
-    margin-bottom: 5px;
-    transition: all 0.3s;
+.visualization-toggle .btn-outline-primary {
+    color: var(--pastel-blue);
+    border-color: var(--pastel-blue);
+}
+
+.visualization-toggle .btn-outline-primary:hover, 
+.visualization-toggle .btn-outline-primary:active, 
+.visualization-toggle .btn-outline-primary.active {
+    background-color: var(--pastel-blue);
+    border-color: var(--pastel-blue);
+    color: white;
 }
 
 #visualization-container {
@@ -197,7 +211,7 @@ header h1 {
     font-weight: 700;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    color: #0d2e4d;
+    color: var(--text-blue);
 }
 
 .paper-content p {
@@ -227,12 +241,12 @@ header h3 {
     margin-right: auto;
 }
 
-/* Improve blockquote styling for the paper */
+/* Improve blockquote styling with pastel blue */
 .paper-content blockquote {
     max-width: 760px;
     margin: 2rem auto;
     padding-left: 1.5rem;
-    border-left: 4px solid #0d2e4d;
+    border-left: 4px solid var(--pastel-blue);
     font-style: italic;
     color: #495057;
 }

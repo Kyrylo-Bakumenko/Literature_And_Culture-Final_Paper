@@ -74,13 +74,21 @@ function renderMarkdown(markdownContent) {
         // Render and set the HTML
         const renderedContent = marked.parse(markdownContent);
         
-        // Check if this is the paper content and add a class if it is
+        // Get URL parameters
         const urlParams = new URLSearchParams(window.location.search);
         const mdParam = urlParams.get('md');
         
-        if (mdParam === 'korean-identity-final') {
+        // SIMPLIFIED CONDITION: If we're at root URL (no parameter) OR explicitly requesting korean-identity-final,
+        // apply the paper styling
+        const isMainPaper = mdParam === 'korean-identity-final' || !mdParam;
+        
+        console.log(`Rendering markdown with parameters: mdParam=${mdParam}, isMainPaper=${isMainPaper}`);
+        
+        if (isMainPaper) {
+            console.log("Applying paper-content styling");
             contentContainer.innerHTML = `<div class="paper-content">${renderedContent}</div>`;
         } else {
+            console.log("Using standard content styling");
             contentContainer.innerHTML = renderedContent;
         }
         

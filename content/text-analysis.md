@@ -44,4 +44,40 @@ LDA (Latent Dirichlet Allocation) is a statistical method for discovering abstra
 
 In our visualization, each topic is represented as a cluster of related words. The size of each word indicates its importance to that topic. Documents are positioned based on their topic distributions, with similar documents appearing closer together.
 
-This analysis reveals thematic patterns across Korean literature, helping us identify recurring motifs, historical concerns, and stylistic characteristics that might not be apparent from reading individual texts.
+Unfortunately, despite applying advanced computational methods, I was unable to unearth significant patterns from this analysis. This limitation appears to stem from several factors: the relatively small corpus size, the heterogeneous nature of the selected texts spanning different time periods and contexts, and the inherent challenges of analyzing translated works. The collection of short stories selected, while important individually, may not be representative of the entire literary or cultural context at the time. Additionally, nuances of Korean language and cultural references are inevitably altered in translation, potentially obscuring meaningful patterns that would be apparent in the original texts.
+
+The analysis serves as an important reminder of the limitations of computational methods when working with literary texts, particularly those from cultures and contexts different from the tools' original design parameters. In the future, I will look for a larger and more focused corpus, potentially incorporating original language texts alongside translations, and developing more culturally-specific analytical frameworks.
+
+### Texts Included in Analysis
+
+The following 29 Korean literary works were included in this analysis:
+
+1. The White Rabbit
+2. Crows
+3. The Gray Snowman
+4. The Old Hatter
+5. The Shore
+6. Another Man's Room
+7. Im Kkŏkchŏng
+8. Lizard
+9. My Innocent Uncle
+10. The Son
+11. Silvery World
+12. Naktong River
+13. Coarse Sand
+14. Knifeblade
+15. Mother's Hitching Post
+16. The Shaman Painting
+17. Far from Home
+18. Wings
+19. Jackals
+20. The Battle of Dragon with Dragon
+21. Ballad
+22. The Ritual at the Well
+23. When the Buckwheat Blooms
+24. Wayfarer
+25. Potatoes
+26. Footprints in the Snow
+27. A Lucky Day
+28. Commoners' Village
+29. Seoul 1964, Winter

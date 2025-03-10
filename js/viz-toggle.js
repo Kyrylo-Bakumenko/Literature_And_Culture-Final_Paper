@@ -14,16 +14,16 @@ function switchVisualization(type) {
     // Update the image source based on the selected type
     switch(type) {
         case 'overall':
-            imageElement.src = 'assets/tfidf_top10.jpg';
+            imageElement.src = 'assets/tfidf_overall_all.png';
             imageElement.alt = 'TF-IDF top 10 words per source';
             break;
         case 'positive':
-            imageElement.src = 'assets/positive_words.jpg';
-            imageElement.alt = 'Positive words per source';
+            imageElement.src = 'assets/tfidf_positive_all.png';
+            imageElement.alt = 'TF-IDF top 10 positive sentiment words per source';
             break;
         case 'negative':
-            imageElement.src = 'assets/negative_words.jpg';
-            imageElement.alt = 'Negative words per source';
+            imageElement.src = 'assets/tfidf_negative_all.png';
+            imageElement.alt = 'TF-IDF top 10 negative sentiment words per source';
             break;
         default:
             console.error(`Unknown visualization type: ${type}`);
@@ -58,23 +58,11 @@ function toggleCodeVisibility(button) {
 document.addEventListener('DOMContentLoaded', function() {
     console.log("viz-toggle.js: Document ready");
     
-    // Wait a bit to ensure content is rendered
-    setTimeout(() => {
-        // Only run this code on the text-analysis page
-        const urlParams = new URLSearchParams(window.location.search);
-        const mdParam = urlParams.get('md');
-        
-        if (mdParam === 'text-analysis') {
-            console.log("viz-toggle.js: On text-analysis page, looking for toggle container");
-            // Check if the toggle buttons exist
-            const toggleContainer = document.querySelector('.visualization-toggle');
-            if (toggleContainer) {
-                console.log("viz-toggle.js: Toggle container found, initializing");
-                // Set the default visualization to 'overall'
-                switchVisualization('overall');
-            } else {
-                console.warn("viz-toggle.js: Toggle container not found!");
-            }
-        }
-    }, 1000);
+    // Simplified initialization - check if visualization toggle exists on any page
+    const toggleContainer = document.querySelector('.visualization-toggle');
+    if (toggleContainer) {
+        console.log("viz-toggle.js: Toggle container found, initializing");
+        // Set the default visualization to 'overall'
+        switchVisualization('overall');
+    }
 });
